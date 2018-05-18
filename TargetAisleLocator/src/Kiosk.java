@@ -30,4 +30,10 @@ public class Kiosk {
             System.exit(0);
         }
     }
+    
+    public static Product search(HashMap<Product, String> map, String name) {
+        for (int i = 0; i < products.size(); i++) {
+            if (map.)
+        }
+    }
 }
