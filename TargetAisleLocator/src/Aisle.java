@@ -5,4 +5,5 @@
  * Revisions: ${LOG}
  */
 public class Aisle {
+	// this is the aisle
 }
