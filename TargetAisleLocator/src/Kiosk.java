@@ -12,6 +12,7 @@ import java.util.HashSet;
  * Revisions: ${LOG}
  */
 public class Kiosk {
+    // list of products in Target
     public HashMap<Product,String> products;
 
     public static void main(String[] args){
