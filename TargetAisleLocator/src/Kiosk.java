@@ -10,7 +10,6 @@ import java.util.*;
 public class Kiosk{
 
     private HashMap<Product, String> products;
-    private HashMap<Product, String> shoppingcart;
 
     public static void main (String[] args) throws IOException{
         FileLoader fl = new FileLoader();
