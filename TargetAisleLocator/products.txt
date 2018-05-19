@@ -1,0 +1,17 @@
+bananas,1
+apples,1
+cereal,2
+milk,5
+cookies,2
+ketchup,3
+lettuce,1
+italian dressing,3
+hamburgers,4
+turkey dogs,4
+pork,4
+eggs,5
+bread,2
+meatloaf,4
+french dressing,3
+ranch dressing,3
+ketchup packets,3

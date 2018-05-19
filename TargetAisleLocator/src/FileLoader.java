@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -8,7 +9,7 @@ import java.util.HashMap;
  * Revisions: ${LOG}
  */
 public class FileLoader {
-    private HashMap<Product, String> products;
+    private HashMap<Product, String> products = new HashMap<>();
 
     public FileLoader() throws IOException{
         File file = new File("products.txt");
@@ -17,11 +18,27 @@ public class FileLoader {
         String line;
         while(( line = br.readLine()) != null){
             String[] readLine = line.split(",");
-            Product newProduct = new Product();
-            newProduct.setName(readLine[1]);
-            newProduct.setAisle_num(readLine[2]);
+            Product newProduct = new Product(readLine[0], readLine[1]);
             products.put(newProduct, newProduct.getAisle_num());
         } //end while
+    }
+
+    public ArrayList<Product> searchStore(HashMap<Product, String> map, String name) {
+        ArrayList<Product> searchedlist = new ArrayList<>();
+        boolean foundMatches = false;
+        System.out.println("Searching items...");
+        for (Product key : map.keySet()){
+            // iterate over products in store
+            if (name.matches(key.getName())) {
+                foundMatches = true;
+                searchedlist.add(key); // add to the searchedlist if store have similar item
+                System.out.println(key.getName());
+            }
+        }
+        if (!(foundMatches)){
+            System.out.println("No items matching the criteria were found.");
+        }
+        return searchedlist;
     }
 
     public HashMap<Product, String> getProducts(){return products;}

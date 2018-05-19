@@ -7,15 +7,11 @@
  */
 public class Product {
     private String aisle_num;
-    private String name;
+    private String prod_name;
 
-    public Product(){
-        name = null;
-    }
-
-    public Product(int id, String aisle, String name, int size){
+    public Product(String name, String aisle){
         aisle_num = aisle;
-        name = this.name;
+        prod_name = name;
     }
 
     public String getAisle_num() {
@@ -23,14 +19,14 @@ public class Product {
     }
 
     public String getName() {
-        return name;
+        return prod_name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.prod_name = name;
     }
 
-    public String setAisle_num(String aisle_num) {
+    public void setAisle_num(String aisle_num) {
         this.aisle_num = aisle_num;
     }
 
