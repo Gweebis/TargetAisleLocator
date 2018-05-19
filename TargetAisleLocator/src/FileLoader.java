@@ -24,4 +24,16 @@ public class FileLoader {
     }
 
     public HashMap<Product, String> getProducts(){return products;}
+
+    public static ArrayList<Product> Search (HashMap<Product, String> map, String name) {
+        private ArrayList<Product> searchedlist;
+        for (Product key : map.keySet()){
+            // iterate over products in store
+            if name.contains(key.name) {
+                searchedlist.add(key); // add to the searchedlist if store have similar item
+                System.out.println(key.name);
+            }
+        }
+        return searchedlist;
+    }
 }
