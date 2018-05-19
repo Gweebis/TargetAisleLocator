@@ -6,28 +6,19 @@
  * Holds the description of the product class
  */
 public class Product {
-    private int prod_id;
-    private int aisle_num;
+    private String aisle_num;
     private String name;
-    private int inventory_size;
 
     public Product(){
         name = null;
     }
 
-    public Product(int id, int aisle, String name, int size){
-        prod_id = id;
+    public Product(int id, String aisle, String name, int size){
         aisle_num = aisle;
         name = this.name;
-        inventory_size = size;
-
     }
 
-    public int getProd_id() {
-        return prod_id;
-    }
-
-    public int getAisle_num() {
+    public String getAisle_num() {
         return aisle_num;
     }
 
@@ -39,16 +30,9 @@ public class Product {
         this.name = name;
     }
 
-    public void setAisle_num(int aisle_num) {
+    public String setAisle_num(String aisle_num) {
         this.aisle_num = aisle_num;
     }
 
-    public int getInventory_size() {
-        return invetory_size;
-    }
-
-    public void setInventory_size(int inventory_size) {
-        this.inventory_size = inventory_size;
-    }
 
 }

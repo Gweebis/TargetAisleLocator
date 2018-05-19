@@ -19,21 +19,10 @@ public class FileLoader {
             String[] readLine = line.split(",");
             Product newProduct = new Product();
             newProduct.setName(readLine[1]);
-            products.put(newProduct, readLine[2]);
+            newProduct.setAisle_num(readLine[2]);
+            products.put(newProduct, newProduct.getAisle_num());
         } //end while
     }
 
     public HashMap<Product, String> getProducts(){return products;}
-
-    public static ArrayList<Product> Search (HashMap<Product, String> map, String name) {
-        private ArrayList<Product> searchedlist;
-        for (Product key : map.keySet()){
-            // iterate over products in store
-            if name.contains(key.name) {
-                searchedlist.add(key); // add to the searchedlist if store have similar item
-                System.out.println(key.name);
-            }
-        }
-        return searchedlist;
-    }
 }
